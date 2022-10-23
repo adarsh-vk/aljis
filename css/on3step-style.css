@@ -1030,7 +1030,8 @@ li>a:only-child:after {
 #subheader {
   padding-bottom: 70px;
   background: #222;
-  background: url(../img/bg-subheader.jpg)top fixed;
+  background: url(../about-images/about-header1.jpg)top fixed;
+  
 }
 #subheader h1 {
   color: #eceff3;
