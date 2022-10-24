@@ -111,9 +111,10 @@ $(window).on("load", function() {
       scrollTop: 0
     }, 800);
   });
+  // end function
   
   
-  contact
+  // contact
   $(function() {
     contactsent1.on('click', function(e) {
       e.preventDefault();
