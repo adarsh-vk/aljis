@@ -14,21 +14,21 @@
           <div class="row">
           
             <div class="col-md-8">
-                <form enctype="multipart/form-data" method="post" action="mail.php">
+                <form action="mail.php" method="post" >
                             <div class="form-group user-name">
-                                <input type="text" name="pname" required="" id="name-contact-1" placeholder="Your Name">
+                                <input type="text" name="pname"  placeholder="Your Name">
                             </div>
 
                             <div class="form-group user-email">
-                                <input type="email" name="pmail" required="" id="email-contact" placeholder="Your Email">
+                                <input type="email" name="pmail"  placeholder="Your Email">
                             </div>
                         
                             <div class="form-group user-message">
-                                <textarea name="pmes" required="" id="message-contact" placeholder="Your Message"></textarea>
+                                <textarea name="pmes"  placeholder="Your Message"></textarea>
                                 <div class="success" id="mail_success">Thank you. Your message has been sent</div>
                                 <div class="error" id="mail_failed">Error, email not sent</div>
                             </div>
-                    <button type="submit" id="send-contact-1" class="btn-contact">Send Now</button>
+                    <button type="submit" >Send Now</button>
                 </form>
             </div>
             
