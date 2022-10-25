@@ -1,33 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-  
-<!-- Mirrored from www.on3-step.com/tf/build/html/contact-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Oct 2022 15:56:49 GMT -->
+<?php
+
+if($_POST["submit"]) {
+    $recipient="your@email.address";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?><!DOCTYPE html>
+
+<html>
 <head>
     <meta charset="utf-8">
-    <title>Aljis Designs Engneering Consultancy </title>
+    <title>Contact form to email</title>
 </head>
-    <body>
-      
-      <!-- section contact -->
-      <section aria-label="contact" class="whitepage">
-        <div class="container">
-          <div class="row">
-          
-            <div class="col-md-8">
-                <form action="mail.php" method="post">
-                    <label for="name">Your Name</label>
-                    <input type="text"  name="pname" placeholder="Your name..">
-                    <label for="lname">Email</label>
-                    <input type="pmail"  name="email" placeholder="Your email..">
-                   
-                    <label for="message">Message</label>
-                    <textarea  name="pmes" placeholder="Write something.." style="height:200px"></textarea>
-                    <input type="submit" value="Submit">
-                  </form>
-            </div>
-            
-            </div>
-  </body>
 
-<!-- Mirrored from www.on3-step.com/tf/build/html/contact-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Oct 2022 15:56:50 GMT -->
-</html>
+<body>
+
+    <?=$thankYou ?>
+
+    <form method="post" action="contact.php">
+        <label>Name:</label>
+        <input name="sender">
+
+        <label>Email address:</label>
+        <input name="senderEmail">
+
+        <label>Message:</label>
+        <textarea rows="5" cols="20" name="message"></textarea>
