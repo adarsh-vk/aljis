@@ -8,12 +8,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">  
-    <form id="contact" action="sendmail.php" method="post">
+    <form id="contact" action="" >
       <h3>Quick Contact</h3>
       <h4>Contact us today, and get reply with in 24 hours!</h4>
  
@@ -41,5 +42,24 @@
     
      
   </div>
+  <script>
+    $("#contact").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbzDrVkLIXo6xHCf7oAv2lrOVF35ybgW6tvob8l5VWYJTTbrUffdMKDjnae878Tl4tQn/exec",
+            data:$("#contact").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
 </body>
 </html>
