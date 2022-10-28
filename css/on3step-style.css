@@ -2765,10 +2765,10 @@ footer.white {
 .social-icons span {
   text-shadow: none;
   padding: 0 25px 0 0;
-  width: 60px;
-  height: 60px;
+  /* width: 60px;
+  height: 0px; */
   text-align: center;
-  font-size: 25pt;
+  font-size: 12pt;
   border-radius: 1px;
   -moz-border-radius: 1px;
   -webkit-border-radius: 1px;
