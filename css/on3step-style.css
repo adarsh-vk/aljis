@@ -598,7 +598,7 @@ section {
   left: 0px;
   width: 100%;
   z-index: 9999;
-  font-size: 20px;
+  font-size: 11px;
   color: #ddd;
   background: #111111;
   padding: 8px 65px 10px 40px;
@@ -606,10 +606,10 @@ section {
 .social-icons-subnav span {
   text-shadow: none;
   padding: 8px;
-  width: 50px;
-  height: 50px;
+  /* width: 50px; */
+  /* height: 50px; */
   text-align: center;
-  font-size: 20pt;
+  font-size: 12pt;
   color: #ff6600;
   border-radius: 1px;
   -moz-border-radius: 1px;
@@ -2658,7 +2658,7 @@ textarea:focus:-ms-input-placeholder {
 footer {
   background: #191919;
   color: #e7e7e7;
-  font-size: 15px;
+  font-size: 11px;
   font-weight: 400;
   letter-spacing:.6px;
   padding: 30px 0 30px 0;
@@ -2682,10 +2682,10 @@ footer.white {
 .social-icons span {
   text-shadow: none;
   padding: 0 25px 0 0;
-  width: 60px;
-  height: 60px;
+  /* width: 60px;
+  height: 60px; */
   text-align: center;
-  font-size: 20pt;
+  font-size: 12pt;
   border-radius: 1px;
   -moz-border-radius: 1px;
   -webkit-border-radius: 1px;
